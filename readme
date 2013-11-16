@@ -1,0 +1,26 @@
+usage: svmpredict [-h] [-n NUMBER] [-l LEARN [LEARN ...]] [-p PREDICT]
+                  [-d DELIMITER] [-f FILTER [FILTER ...]]
+                  data
+
+learn data in specified headed columns for specified trials and check for
+accuracy on remaining trials -- predicting specified data
+
+positional arguments:
+  data                  file or folder of data to be used, if folder, each
+                        file should be separate instance of data
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -n NUMBER, --number NUMBER
+                        number of entries to train on the the rest will be
+                        predicted (if number is less than 1, will treat as
+                        percentage of total entries
+  -l LEARN [LEARN ...], --learn LEARN [LEARN ...]
+                        the heads of the columns to be used for learning
+  -p PREDICT, --predict PREDICT
+                        the head of the column to be predicted
+  -d DELIMITER, --delimiter DELIMITER
+                        delimiter for the data files
+  -f FILTER [FILTER ...], --filter FILTER [FILTER ...]
+                        filter row with head (first string) and only take
+                        values matching following strings
